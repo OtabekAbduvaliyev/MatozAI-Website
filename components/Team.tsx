@@ -76,13 +76,13 @@ const Team: React.FC = () => {
                     </a>
                   )}
                   {member.links.linkedin && (
-                    <a href={member.links.linkedin} className="flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 hover:bg-[#0077b5] hover:text-white text-slate-400 transition-all duration-300 font-medium">
+                    <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 hover:bg-[#0077b5] hover:text-white text-slate-400 transition-all duration-300 font-medium">
                       <Linkedin size={20} />
                       <span className="text-sm">LinkedIn</span>
                     </a>
                   )}
                   {member.links.twitter && (
-                    <a href={member.links.twitter} className="flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 hover:bg-[#1DA1F2] hover:text-white text-slate-400 transition-all duration-300 font-medium">
+                    <a href={member.links.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-dark-900 hover:bg-[#1DA1F2] hover:text-white text-slate-400 transition-all duration-300 font-medium">
                       <Twitter size={20} />
                     </a>
                   )}

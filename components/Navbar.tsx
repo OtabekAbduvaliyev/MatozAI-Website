@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <a 
-          href="https://matozai.vercel.app/"
+          href="https://matoz-ai.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-medium transition-all transform hover:scale-105 shadow-lg shadow-emerald-900/50 text-sm flex items-center gap-2"

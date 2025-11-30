@@ -72,7 +72,7 @@ const Features: React.FC = () => {
         <div className="border-t border-dark-800 pt-16">
           <h3 className="text-center text-slate-500 text-sm uppercase tracking-widest mb-10">Texnologik Stack</h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-12 opacity-70">
-            {["React 19", "TypeScript", "Vite", "Tailwind CSS", "Gemini API", "IndexedDB"].map((tech) => (
+            {["React 19", "TypeScript", "Vite", "Tailwind CSS", "Gemini API", "IndexedDB", "Nest JS", "PostgresSQL", "Prisma ORM", "JWT Auth"].map((tech) => (
               <span key={tech} className="text-xl md:text-2xl font-bold text-slate-300 hover:text-emerald-400 transition-colors cursor-default">
                 {tech}
               </span>

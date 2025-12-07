@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Mic } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,11 @@ const Navbar: React.FC = () => {
   }, []);
 
   const scrollTo = (id: string) => {
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home first
+      window.location.href = `/#${id}`;
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -24,28 +31,36 @@ const Navbar: React.FC = () => {
       scrolled ? 'bg-dark-900/90 backdrop-blur-md border-b border-dark-700 py-3 shadow-lg' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <Link to="/" className="flex items-center gap-2 cursor-pointer group">
           <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
             <Mic size={24} />
           </div>
           <span className="text-xl font-bold tracking-tight text-white">Matoz<span className="text-emerald-400">AI</span></span>
-        </div>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <button onClick={() => scrollTo('problem')} className="hover:text-emerald-400 transition-colors">Muammo</button>
-          <button onClick={() => scrollTo('features')} className="hover:text-emerald-400 transition-colors">Imkoniyatlar</button>
-          <button onClick={() => scrollTo('team')} className="hover:text-emerald-400 transition-colors">Jamoa</button>
-          <button onClick={() => scrollTo('roadmap')} className="hover:text-emerald-400 transition-colors">Rejalar</button>
+          {location.pathname === '/' ? (
+            <>
+              <button onClick={() => scrollTo('problem')} className="hover:text-emerald-400 transition-colors">Muammo</button>
+              <button onClick={() => scrollTo('features')} className="hover:text-emerald-400 transition-colors">Imkoniyatlar</button>
+              <button onClick={() => scrollTo('team')} className="hover:text-emerald-400 transition-colors">Jamoa</button>
+              <button onClick={() => scrollTo('roadmap')} className="hover:text-emerald-400 transition-colors">Rejalar</button>
+              <Link to="/demo" className="hover:text-emerald-400 transition-colors">Demo</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/" className="hover:text-emerald-400 transition-colors">Bosh Sahifa</Link>
+              <Link to="/demo" className="hover:text-emerald-400 transition-colors text-emerald-400">Demo</Link>
+            </>
+          )}
         </div>
 
-        <a 
-          href="https://matoz-ai.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/demo"
           className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-medium transition-all transform hover:scale-105 shadow-lg shadow-emerald-900/50 text-sm flex items-center gap-2"
         >
           Demoni Sinash
-        </a>
+        </Link>
       </div>
     </nav>
   );

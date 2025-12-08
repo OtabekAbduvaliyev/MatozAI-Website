@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Mic, ArrowRight, Play } from 'lucide-react';
 
 // YouTube video ID
-const VIDEO_1_ID = 'iQ7BVqnCQzM';
+const VIDEO_1_ID = 'v291dWeNzME';
 
 // Declare YouTube API types
 declare global {
@@ -133,7 +133,7 @@ const Demo: React.FC = () => {
             <div className="relative w-full bg-dark-800/40" style={{ height: 'clamp(400px, 70vh, 800px)' }}>
               <div className="absolute inset-0 w-full h-full">
                 {/* YouTube Video Player */}
-                <div 
+                <div
                   ref={video1Ref}
                   className="w-full h-full"
                   style={{ height: '100%' }}
@@ -151,7 +151,7 @@ const Demo: React.FC = () => {
                 )}
               </div>
             </div>
-            
+
             {/* Minimalistic Description */}
             <div className="p-4 sm:p-6 bg-dark-800/30 border-t border-dark-700/30">
               <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1">
@@ -168,22 +168,22 @@ const Demo: React.FC = () => {
       {/* Call to Action Section */}
       <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          
+
           {/* Minimal Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tight">
             O'zingiz sinab ko'ring <br />
             <span className="text-emerald-400">hoziroq.</span>
           </h2>
-          
+
           <p className="text-sm sm:text-base md:text-lg text-slate-400 mb-8 md:mb-12 max-w-xl mx-auto font-light leading-relaxed">
             Hech qanday ro'yxatdan o'tish shart emas. Shunchaki tugmani bosing va texnologiyani sinab ko'ring.
           </p>
-          
+
           {/* Action Area */}
           <div className="relative inline-block group">
-            
+
             {/* Main Button */}
-            <a 
+            <a
               href="https://matoz-ai.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
@@ -196,36 +196,36 @@ const Demo: React.FC = () => {
 
             {/* Animated Creative Cue (Desktop) */}
             <div className="hidden lg:block absolute -right-48 top-1/2 -translate-y-1/2 pointer-events-none">
-               <div className="relative">
-                  {/* Handwritten-style Arrow SVG */}
-                  <svg width="120" height="60" viewBox="0 0 120 60" className="text-emerald-500/80 -rotate-12 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
-                    <path 
-                      d="M 110 10 Q 60 50 10 30" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round"
-                      className="animate-[dash_2s_ease-in-out_infinite]"
-                    />
-                    <path 
-                      d="M 10 30 L 25 25 M 10 30 L 20 40" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  
-                  {/* Floating Label */}
-                  <span className="absolute -top-4 right-0 font-handwriting text-emerald-400 text-sm -rotate-6 animate-pulse">
-                    Hoziroq sinab ko'ring!
-                  </span>
+              <div className="relative">
+                {/* Handwritten-style Arrow SVG */}
+                <svg width="120" height="60" viewBox="0 0 120 60" className="text-emerald-500/80 -rotate-12 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+                  <path
+                    d="M 110 10 Q 60 50 10 30"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    className="animate-[dash_2s_ease-in-out_infinite]"
+                  />
+                  <path
+                    d="M 10 30 L 25 25 M 10 30 L 20 40"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
 
-                  {/* Simulated Mouse Cursor */}
-                  <div className="absolute -left-4 bottom-0 animate-[bounce_2s_infinite]">
-                    <Play className="text-white fill-emerald-500 rotate-[-15deg]" size={24} />
-                  </div>
-               </div>
+                {/* Floating Label */}
+                <span className="absolute -top-4 right-0 font-handwriting text-emerald-400 text-sm -rotate-6 animate-pulse">
+                  Hoziroq sinab ko'ring!
+                </span>
+
+                {/* Simulated Mouse Cursor */}
+                <div className="absolute -left-4 bottom-0 animate-[bounce_2s_infinite]">
+                  <Play className="text-white fill-emerald-500 rotate-[-15deg]" size={24} />
+                </div>
+              </div>
             </div>
 
             {/* Mobile Hint (Simple Arrow) */}
@@ -238,18 +238,18 @@ const Demo: React.FC = () => {
 
           {/* Minimal Footer Stats */}
           <div className="mt-12 md:mt-20 flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 text-xs text-slate-600 font-mono uppercase tracking-widest">
-             <div className="flex items-center gap-2">
-               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-               Bepul
-             </div>
-             <div className="flex items-center gap-2">
-               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-               Tezkor
-             </div>
-             <div className="flex items-center gap-2">
-               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
-               Xavfsiz
-             </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+              Bepul
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+              Tezkor
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+              Xavfsiz
+            </div>
           </div>
 
         </div>
